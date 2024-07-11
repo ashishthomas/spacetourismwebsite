@@ -1,5 +1,5 @@
 let destinations = [];
-fetch('../data.json')
+fetch('https://github.com/lowlifehighway/spacetourismwebsite/blob/main/data.json')
   .then((response) => response.json())
   .then((data) => {
     destinations = data.destinations;
