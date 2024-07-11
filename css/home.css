@@ -1,0 +1,125 @@
+body {
+  background-image: url('../assets/home/background-home-desktop.jpg');
+}
+
+.h {
+  border-bottom: 0.3rem solid white;
+}
+.main-content {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex: 1 0 0;
+  align-self: stretch;
+
+  padding-bottom: 9.8rem;
+  padding-top: 40rem;
+}
+.hero {
+  display: grid;
+
+  padding: 0 16.5rem;
+
+  gap: 4.8rem;
+
+  margin: 0 auto;
+}
+.inner-hero {
+  grid-row: 2/-1;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+}
+
+.hero-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.hero-text1 {
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* desktop/heading-xs */
+  font-family: 'Barlow', sans-serif;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.hero-text2 {
+  color: #fff;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* desktop/heading-xl */
+  font-family: 'Bellefair', serif;
+  font-size: 14.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.hero-text3 {
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* desktop/body */
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+}
+
+.explore-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2.4rem;
+  flex: 1 0 0;
+}
+
+.explore-button,
+.explore-button:visited {
+  font-feature-settings: 'clig' off, 'liga' off;
+  /* desktop/heading-s */
+  font-family: 'Bellefair', serif;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 3.2rem;
+  width: 27.2rem;
+  height: 27.2rem;
+  /* padding: 6.8rem; */
+  background-color: #fff;
+  position: relative;
+  color: #0b0d17;
+}
+.explore-button::after {
+  content: '';
+  position: absolute;
+  background-color: green;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 1s ease;
+  background-color: #ffffff;
+  opacity: 0.2;
+}
+.explore-button:hover::after {
+  transform: scale(1.5);
+}
