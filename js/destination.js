@@ -1,10 +1,9 @@
-let destinations = [];
-fetch('../data.json')
-  .then((response) => response.json())
-  .then((data) => {
-    destinations = data.destinations;
-  })
-  .catch((error) => console.error('Error loading JSON:', error));
+
+
+import info from '../data.json' with {type: 'json'};
+const destinations = info.destinations
+
+console.log(destinations);
 
 window.addEventListener('load', function () {
   let index = 0;
