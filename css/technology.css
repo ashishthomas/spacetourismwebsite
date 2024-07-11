@@ -1,0 +1,105 @@
+body {
+  background-image: url('../assets/technology/background-technology-desktop.jpg');
+}
+.t {
+  border-bottom: 0.3rem solid white;
+}
+.container {
+  padding-top: 4.8rem;
+}
+.content {
+  padding-left: 16rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.main-content {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 6.4rem;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.pagination button {
+  background: none;
+
+  color: #ffffff;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* desktop/heading-s */
+  font-family: 'Bellefair', serif;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+  border: 1px solid rgba(255, 255, 255);
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+.main-text span {
+  color: #ffffff;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* desktop/heading-s */
+  font-family: 'Bellefair', serif;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.main-text h1 {
+  color: #ffffff;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* desktop/heading-m */
+  font-family: 'Bellefair', serif;
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.main-text p {
+  color: #d0d6f9;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  /* desktop/body */
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 32.4px */
+}
+
+.tech-img-container {
+  justify-self: end;
+}
+.tech-img {
+  margin: 4.8rem 0;
+  width: 60.8rem;
+}
