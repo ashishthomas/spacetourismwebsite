@@ -13,34 +13,6 @@ body {
   gap: 2.4rem;
   padding: 0 16rem;
 }
-.page-title {
-  display: flex;
-  gap: 2.4rem;
-  align-items: flex-start;
-}
-.page-title span {
-  color: #fff;
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2.8rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.4725rem;
-
-  opacity: 0.25;
-}
-.page-title p {
-  color: #fff;
-  font-feature-settings: 'clig' off, 'liga' off;
-
-  /* desktop/heading-xs */
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2.8rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.4rem;
-}
 .main-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
