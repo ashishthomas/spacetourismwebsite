@@ -4,3 +4,4 @@ window.addEventListener('load', function () {
     document.querySelector('.body').style.display = '';
   }, 3000);
 });
+
