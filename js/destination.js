@@ -1,11 +1,8 @@
-
-
 import info from '../data.json' with {type: 'json'};
+
 const destinations = info.destinations
 
-console.log(destinations);
-
-window.addEventListener('load', function () {
+window.addEventListener('load',  () => {
   let index = 0;
 
   const planets = document.querySelectorAll('.planets');
@@ -42,5 +39,4 @@ window.addEventListener('load', function () {
 
   // Initial load
   updatePlanetInfo(index);
-  console.log(...planets);
 });
