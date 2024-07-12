@@ -28,6 +28,19 @@ window.addEventListener('load', () => {
 
     const technologyDescription = technology[index].description;
 
+    mainText.classList.add('fadeIn');
+    image.classList.add('fadeIn');
+    explanation.classList.add('fadeIn');
+    // distance.classList.add('fadeIn');
+    // travel.classList.add('fadeIn');
+    setTimeout(() => {
+      mainText.classList.remove('fadeIn');
+      image.classList.remove('fadeIn');
+      explanation.classList.remove('fadeIn');
+      // distance.classList.remove('fadeIn');
+      // travel.classList.remove('fadeIn');
+    }, 1000);
+
     mainText.innerHTML = technologyName;
     explanation.innerHTML = technologyDescription;
     image.src = technologyImg;

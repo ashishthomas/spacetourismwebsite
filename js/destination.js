@@ -1,8 +1,8 @@
 import info from '../data.json' with {type: 'json'};
 
-const destinations = info.destinations
+const destinations = info.destinations;
 
-window.addEventListener('load',  () => {
+window.addEventListener('load', () => {
   let index = 0;
 
   const planets = document.querySelectorAll('.planets');
@@ -18,6 +18,19 @@ window.addEventListener('load',  () => {
     const planetDescription = destinations[index].description;
     const planetDistance = destinations[index].distance;
     const planetTravel = destinations[index].travel;
+
+    destination.classList.add('fadeIn');
+    image.classList.add('fadeIn');
+    descriptionContainer.classList.add('fadeIn');
+    distance.classList.add('fadeIn');
+    travel.classList.add('fadeIn');
+    setTimeout(() => {
+      destination.classList.remove('fadeIn');
+      image.classList.remove('fadeIn');
+      descriptionContainer.classList.remove('fadeIn');
+      distance.classList.remove('fadeIn');
+      travel.classList.remove('fadeIn');
+    }, 1000);
 
     destination.innerHTML = planetName;
     image.src = planetImg;
