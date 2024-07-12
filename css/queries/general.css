@@ -1,0 +1,57 @@
+@media (max-width: 75em) {
+  header {
+    padding: 0;
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .logo-container {
+    padding: 0;
+    gap: 0;
+    justify-content: center;
+  }
+  .no-tab {
+    display: none;
+  }
+}
+
+@media (max-width: 34em) {
+  .no-phone {
+    display: none;
+  }
+
+  header {
+    gap: 0;
+    padding: 4.8rem 2.4rem;
+  }
+  .logo-container {
+    justify-content: normal;
+  }
+
+  #menu-button,
+  #menu-button:focus-visible {
+    display: flex;
+    z-index: 2;
+  }
+
+  .explore-button,
+  .explore-button:visited {
+    width: 14.4rem;
+    height: 14.4rem;
+    font-size: 1.8rem;
+  }
+
+  .page-title {
+    align-items: center;
+    justify-content: center;
+  }
+  .page-title span {
+    font-size: 1.6rem;
+    letter-spacing: 0.24rem;
+  }
+  .page-title p {
+    font-size: 1.6rem;
+    letter-spacing: 0.24rem;
+  }
+}

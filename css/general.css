@@ -13,11 +13,12 @@ html {
 body {
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
   font-size: 1.6rem;
   color: #d0d6f9;
 
   overflow-x: hidden;
-  height: 100%;
+  min-height: 100vh;
 }
 .hidden {
   display: none;
@@ -92,6 +93,33 @@ nav {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.27rem;
+}
+
+#menu-button,
+#menu-button:focus-visible {
+  height: fit-content;
+  /* display: flex; */
+  gap: 8px;
+  flex-direction: column;
+  justify-self: end;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  outline: none;
+  display: none;
+}
+
+.menu {
+  width: 3.5rem;
+  height: 0.3rem;
+  background-color: #d0d6f9; /* border: 0; */
+  border-radius: 5px;
+  transition: transform 0.5s ease;
+  transform-origin: right;
+}
+.menu2 {
+  transition: opacity 0.5s ease;
 }
 
 .page-title {

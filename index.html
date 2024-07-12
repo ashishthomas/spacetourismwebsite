@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="./css/loader.css" />
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/queries/general.css" />
+    <link rel="stylesheet" href="./css/queries/home.css" />
   </head>
   <body>
     <div id="loader">
@@ -59,9 +61,9 @@
             ><img src="./assets/shared/logo.svg" alt="logo" class="logo"
           /></a>
 
-          <hr />
+          <hr class="no-tab" />
         </div>
-        <nav>
+        <nav class="no-phone">
           <a href="./" class="nav-links h"><span>00</span> Home</a>
           <a href="./destination" class="nav-links d">
             <span>01</span> Destination
@@ -71,6 +73,15 @@
             ><span>03</span> Technology</a
           >
         </nav>
+        <button
+          id="menu-button"
+          aria-expanded="false"
+          aria-controls="hidden-nav"
+        >
+          <div class="menu menu1"></div>
+          <div class="menu menu2"></div>
+          <div class="menu menu3"></div>
+        </button>
       </header>
       <div class="main-content">
         <div class="hero">

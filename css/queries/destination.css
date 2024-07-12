@@ -1,0 +1,56 @@
+@media (max-width: 75em) {
+  .main-content {
+    grid-template-columns: 1fr;
+    padding: 4.8rem 0;
+    gap: 6.4rem;
+  }
+  .explanation {
+    text-align: center;
+  }
+  ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 59em) {
+  .content {
+    padding: 0 6.4rem;
+  }
+
+  .explanation {
+    padding: 2.4rem 0;
+  }
+}
+
+@media (max-width: 34em) {
+  .content {
+    padding: 0 2.4rem;
+  }
+  .planets {
+    font-size: 1.4rem;
+    letter-spacing: 0.21rem;
+  }
+
+  .image {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .destination {
+    font-size: 5.6rem;
+  }
+  .description-container {
+    font-size: 1.5rem;
+  }
+  .destination-info {
+    grid-template-columns: 1fr;
+  }
+  .destination-info div span {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+  }
+  .destination-info div p {
+    font-size: 2.8rem;
+  }
+}

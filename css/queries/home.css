@@ -1,0 +1,47 @@
+@media (max-width: 75em) {
+  body {
+    background-image: url('../../assets/home/background-home-tablet.jpg');
+  }
+  .main-content {
+    padding-top: 20rem;
+  }
+  .inner-hero {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20rem;
+  }
+  .hero-texts {
+    text-align: center;
+  }
+}
+@media (max-width: 59em) {
+  .main-content {
+    padding-top: 5rem;
+  }
+
+  .inner-hero {
+    gap: 10rem;
+  }
+}
+
+@media (max-width: 34em) {
+  body {
+    background-image: url('../../assets/home/background-home-mobile.jpg');
+  }
+  .main-content {
+    padding-top: 0;
+  }
+  .hero {
+    padding: 2.4rem;
+  }
+  .hero-text1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.25rem;
+  }
+  .hero-text2 {
+    font-size: 8rem;
+  }
+  .hero-text3 {
+    font-size: 1.5rem;
+  }
+}
