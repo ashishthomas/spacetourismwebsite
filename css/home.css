@@ -2,9 +2,6 @@ body {
   background-image: url('../assets/home/background-home-desktop.jpg');
 }
 
-.h {
-  border-bottom: 0.3rem solid white;
-}
 .main-content {
   display: flex;
   /* flex-direction: column; */

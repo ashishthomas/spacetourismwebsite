@@ -1,9 +1,7 @@
 body {
   background-image: url('../assets/technology/background-technology-desktop.jpg');
 }
-.t {
-  border-bottom: 0.3rem solid white;
-}
+
 .container {
   padding: 4.8rem 0;
 }
@@ -100,6 +98,6 @@ body {
   justify-self: end;
 }
 .tech-img {
-  margin: 4.8rem 0;
+  /* margin: 4.8rem 0; */
   width: 60.8rem;
 }

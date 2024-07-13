@@ -1,9 +1,7 @@
 body {
   background-image: url('../assets/destination/background-destination-desktop.jpg');
 }
-.d {
-  border-bottom: 0.3rem solid white;
-}
+
 .container {
   padding: 4.8rem 0;
 }

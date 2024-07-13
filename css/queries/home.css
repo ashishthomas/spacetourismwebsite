@@ -18,13 +18,15 @@
   .main-content {
     padding-top: 5rem;
   }
-
+  .hero {
+    padding: 6.4rem;
+  }
   .inner-hero {
     gap: 10rem;
   }
 }
 
-@media (max-width: 34em) {
+@media (max-width: 35em) {
   body {
     background-image: url('../../assets/home/background-home-mobile.jpg');
   }

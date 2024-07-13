@@ -1,0 +1,55 @@
+@media (max-width: 75em) {
+  body {
+    background-image: url('../../assets/crew/background-crew-tablet.jpg');
+  }
+  #carouselIndicators {
+    padding: 4.8rem 0;
+    padding-bottom: 0;
+    gap: 3.6rem;
+  }
+  .carousel-grid {
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+  }
+
+  .carousel-grid div {
+    padding: 0;
+    text-align: center;
+  }
+  .carousel-indicators {
+    align-items: center;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 59em) {
+  .content {
+    padding: 0 4.8rem;
+  }
+}
+
+@media (max-width: 35em) {
+  body {
+    background-image: url('../../assets/crew/background-crew-mobile.jpg');
+  }
+  .content {
+    padding: 0 2.4rem;
+  }
+
+  .carousel-grid div span {
+    font-size: 1.8rem;
+  }
+  .carousel-grid div div {
+    font-size: 2.4rem;
+  }
+  .carousel-grid div .bio {
+    font-size: 1.5rem;
+  }
+  .carousel-grid img {
+    height: 30rem;
+  }
+  .carousel-indicators [data-bs-target] {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+}

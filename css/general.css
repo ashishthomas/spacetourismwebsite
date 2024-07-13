@@ -20,6 +20,7 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
+
 .hidden {
   display: none;
 }
@@ -65,34 +66,47 @@ nav {
 .nav-links,
 .nav-links:link,
 .nav-links:visited {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.8rem;
   height: 9.6rem;
-  color: #ffffff;
-  /* transition: all 0.3s; */
+  font-size: 1.6rem;
 
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  justify-content: center;
+}
+.nav-links,
+.nav-links:link,
+.nav-links:visited,
+.hidden-nav-links,
+.hidden-nav-links:link,
+.hidden-nav-links:visited {
   font-feature-settings: 'clig' off, 'liga' off;
 
-  /* desktop/navigation */
+  display: flex;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.6rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 0.2rem;
+  align-items: center;
+  color: #ffffff;
   text-decoration: none;
+  line-height: normal;
+  font-style: normal;
+  gap: 0.8rem;
 }
 
 .nav-links:hover {
   border-bottom: 0.3rem solid white;
 }
-.nav-links span {
+.nav-links span,
+.hidden-nav-links span {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.27rem;
+}
+
+.bb3px {
+  border-bottom: 0.3rem solid white;
+}
+.br5px {
+  border-right: 0.5rem solid white;
 }
 
 #menu-button,
@@ -120,6 +134,9 @@ nav {
 }
 .menu2 {
   transition: opacity 0.5s ease;
+}
+.hidden-nav {
+  display: none;
 }
 
 .page-title {
@@ -166,4 +183,42 @@ nav {
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 2s;
+}
+
+.slide-in {
+  /* Initial state off-screen to the right */
+  transform: translateX(100%);
+  /* Apply the animation */
+  animation: slide-in 0.5s ease-out forwards;
+  /* overflow: hidden; */
+}
+
+@keyframes slide-in {
+  to {
+    /* Final state on-screen */
+    transform: translateX(0);
+  }
+}
+.slide-out {
+  /* Initial state on-screen */
+  transform: translateX(0);
+  /* Apply the animation */
+  animation: slide-out 0.5s ease-out forwards;
+  /* overflow: hidden; */
+}
+
+@keyframes slide-out {
+  to {
+    /* Final state off-screen to the right */
+    transform: translateX(100%);
+  }
+}
+.overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  backdrop-filter: blur(5px);
 }
