@@ -3,7 +3,9 @@ window.addEventListener('load', async () => {
   let index = 0;
 
   try {
-    const response = await fetch('../data.json');
+    const response = await fetch(
+      'https://lowlifehighway.github.io/spacetourismwebsite/data.json'
+    );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
