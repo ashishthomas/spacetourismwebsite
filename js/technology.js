@@ -1,9 +1,20 @@
-import info from '../data.json' with {type: 'json'};
-
-const technology = info.technology;
-
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
+  let technology = [];
   let index = 0;
+
+  try {
+    const response = await fetch('../data.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const info = await response.json();
+    technology = info.technology;
+  } catch (error) {
+    console.error('Error loading data:', error);
+    document.body.innerHTML =
+      '<p>Failed to load destination data. Please try again later.</p>';
+    return;
+  }
   let technologyImg;
   window.addEventListener('resize', () => {
     technologyImg =
@@ -31,14 +42,11 @@ window.addEventListener('load', () => {
     mainText.classList.add('fadeIn');
     image.classList.add('fadeIn');
     explanation.classList.add('fadeIn');
-    // distance.classList.add('fadeIn');
-    // travel.classList.add('fadeIn');
+
     setTimeout(() => {
       mainText.classList.remove('fadeIn');
       image.classList.remove('fadeIn');
       explanation.classList.remove('fadeIn');
-      // distance.classList.remove('fadeIn');
-      // travel.classList.remove('fadeIn');
     }, 1000);
 
     mainText.innerHTML = technologyName;

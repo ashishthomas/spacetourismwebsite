@@ -1,9 +1,20 @@
-import info from '../data.json' with {type: 'json'};
-
-const destinations = info.destinations;
-
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
+  let destinations = [];
   let index = 0;
+
+  try {
+    const response = await fetch('../data.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const info = await response.json();
+    destinations = info.destinations;
+  } catch (error) {
+    console.error('Error loading data:', error);
+    document.body.innerHTML =
+      '<p>Failed to load destination data. Please try again later.</p>';
+    return;
+  }
 
   const planets = document.querySelectorAll('.planets');
   const destination = document.querySelector('.destination');
@@ -19,17 +30,18 @@ window.addEventListener('load', () => {
     const planetDistance = destinations[index].distance;
     const planetTravel = destinations[index].travel;
 
-    destination.classList.add('fadeIn');
-    image.classList.add('fadeIn');
-    descriptionContainer.classList.add('fadeIn');
-    distance.classList.add('fadeIn');
-    travel.classList.add('fadeIn');
+    [destination, image, descriptionContainer, distance, travel].forEach(
+      (element) => {
+        element.classList.add('fadeIn');
+      }
+    );
+
     setTimeout(() => {
-      destination.classList.remove('fadeIn');
-      image.classList.remove('fadeIn');
-      descriptionContainer.classList.remove('fadeIn');
-      distance.classList.remove('fadeIn');
-      travel.classList.remove('fadeIn');
+      [destination, image, descriptionContainer, distance, travel].forEach(
+        (element) => {
+          element.classList.remove('fadeIn');
+        }
+      );
     }, 1000);
 
     destination.innerHTML = planetName;
@@ -37,17 +49,22 @@ window.addEventListener('load', () => {
     descriptionContainer.innerHTML = planetDescription;
     distance.innerHTML = planetDistance;
     travel.innerHTML = planetTravel;
+
     planets.forEach((planet) => {
       planet.style.borderBottom = '';
     });
     planets[index].style.borderBottom = '3px solid #fff';
   };
 
+  const handleEvent = (event) => {
+    event.preventDefault();
+    const index = event.currentTarget.getAttribute('data-index');
+    updatePlanetInfo(index);
+  };
+
   planets.forEach((planet) => {
-    planet.addEventListener('click', () => {
-      index = planet.getAttribute('data-index');
-      updatePlanetInfo(index);
-    });
+    planet.addEventListener('click', handleEvent);
+    planet.addEventListener('touchstart', handleEvent);
   });
 
   // Initial load
