@@ -22,6 +22,8 @@ The Space Tourism Website is a fictional project aimed at showcasing the possibi
 - **Interactive Elements**: Includes interactive elements such as image sliders and animated buttons.
 - **Informative Content**: Provides detailed information about space destinations and travel packages.
 - **Modern UI/UX**: Designed with a modern and user-friendly interface.
+- **Loading Animation**: Features a loading animation to enhance user experience.
+- **Navigation Menu**: Includes a hidden navigation menu for mobile devices.
 
 ## Technologies Used
 
